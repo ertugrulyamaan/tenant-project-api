@@ -1,98 +1,106 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Tenant Project API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+A backend system designed to explore and demonstrate core concepts of multi-tenant SaaS architecture using NestJS.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+This project focuses on building a tenant-aware collaboration backend where multiple organizations can securely manage projects and members within a shared infrastructure.
 
-## Description
+⚠️ This repository is currently in early development stage.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+---
 
-## Project setup
+## Purpose
 
-```bash
-$ npm install
-```
+Modern SaaS platforms must support multiple organizations (tenants) operating on the same system while ensuring:
 
-## Compile and run the project
+- strict data isolation
+- secure authentication and authorization
+- scalable backend design
+- maintainable domain boundaries
 
-```bash
-# development
-$ npm run start
+The goal of this project is to simulate how a real SaaS backend core is engineered rather than building a simple CRUD application.
 
-# watch mode
-$ npm run start:dev
+---
 
-# production mode
-$ npm run start:prod
-```
+## Initial Scope (Phase 1)
 
-## Run tests
+- User authentication (JWT)
+- Tenant creation and membership
+- Tenant-scoped project management
+- Role-based access control (basic)
+- PostgreSQL-backed data layer
+- Clean modular NestJS architecture
 
-```bash
-# unit tests
-$ npm run test
+---
 
-# e2e tests
-$ npm run test:e2e
+## Out of Scope (for now)
 
-# test coverage
-$ npm run test:cov
-```
+To maintain focus and avoid over-engineering, the following are intentionally excluded in early phases:
 
-## Deployment
+- Multi-database tenancy
+- Billing systems
+- Notification services
+- Real-time communication
+- AI features
+- Advanced distributed infrastructure
+- Full audit platform
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+These may be explored in later iterations.
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+---
 
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
-```
+## Development Status
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+This project is being built incrementally with a focus on:
 
-## Resources
+- clear architectural decisions
+- production-oriented backend thinking
+- testable and observable design
+- iterative improvement
 
-Check out a few resources that may come in handy when working with NestJS:
+Current stage:  
+**Project initialization and core infrastructure setup**
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+---
 
-## Support
+## Tech Stack (Planned)
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+- NestJS
+- TypeScript
+- PostgreSQL
+- Prisma
+- JWT Authentication
+- Argon2
+- Jest
+- Prometheus metrics
+- Docker (local development)
 
-## Stay in touch
+---
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## Philosophy
+
+This repository prioritizes:
+
+- system design clarity over rapid feature delivery
+- correctness over complexity
+- engineering depth over demo completeness
+
+---
+
+## Roadmap (Early)
+
+- [ ] Project bootstrap
+- [ ] Database schema & Prisma setup
+- [ ] Authentication module
+- [ ] Tenant domain
+- [ ] Membership model
+- [ ] Project domain
+- [ ] Authorization rules
+- [ ] Observability basics
+- [ ] Integration tests
+- [ ] Documentation refinement
+
+---
 
 ## License
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+For educational and portfolio purposes.
